@@ -4,10 +4,23 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<VBox alignment="CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.jaropeners.SecondaryController">
+<VBox alignment="CENTER" prefHeight="388.0" prefWidth="636.0" spacing="20.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.jaropeners.SecondaryController">
     <children>
         <Label text="This is the Index Maintenance Stage" />
-        <Button fx:id="secondaryButton" onAction="#switchToPrimary" text="Back to File Search" />
+        <Button fx:id="secondaryButton" onAction="#switchToPrimary" prefHeight="25.0" prefWidth="123.0" text="Back to File Search" />
+      <FlowPane hgap="138.0" prefHeight="211.0" prefWidth="596.0" vgap="48.0">
+         <children>
+            <Button mnemonicParsing="false" text="Add File" />
+            <Button mnemonicParsing="false" text="Remove Out of date" />
+            <Button mnemonicParsing="false" text="Remove Selected Files" />
+         </children>
+         <padding>
+            <Insets top="180.0" />
+         </padding>
+         <VBox.margin>
+            <Insets top="50.0" />
+         </VBox.margin>
+      </FlowPane>
     </children>
     <padding>
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
