@@ -2,32 +2,21 @@
 
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
-<?import javafx.scene.effect.*?>
 <?import javafx.scene.layout.*?>
 
 <VBox alignment="CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.jaropeners.PrimaryController">
    <children>
       <Label text="Jar Openers File Search" />
       <TextField promptText="Search Files" />
-      <HBox alignment="CENTER" spacing="5.0">
-         <children>
-            <RadioButton mnemonicParsing="false" text="Any of the Search Terms" />
-            <RadioButton mnemonicParsing="false" text="All the Search Terms" />
-            <RadioButton mnemonicParsing="false" text="Exact Phrase" />
-         </children>
-      </HBox>
       <Button mnemonicParsing="false" text="Search" />
-      <HBox alignment="CENTER" spacing="200.0">
+      <Button fx:id="primaryButton" onAction="#switchToSecondary" text="Index Maintenance" />
+      <VBox alignment="TOP_CENTER" prefHeight="73.0" prefWidth="149.0">
          <children>
-            <Button fx:id="primaryButton" onAction="#switchToSecondary" text="Index Maintenance" />
-            <Button alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" text="About" textAlignment="CENTER" />
+            <Label text="Search Results" />
          </children>
-      </HBox>
+      </VBox>
    </children>
-   <effect>
-      <Blend />
-   </effect>
    <padding>
-      <Insets bottom="50.0" left="100.0" right="100.0" top="50.0" />
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
    </padding>
 </VBox>
