@@ -28,6 +28,7 @@
           <TableColumn prefWidth="375.0" text="Search Results" />
         </columns>
       </TableView>
+      <Label text="Number of files indexed:" />
    </children>
    <effect>
       <Blend />
