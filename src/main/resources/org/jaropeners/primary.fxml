@@ -17,9 +17,15 @@
          </children>
       </HBox>
       <Button mnemonicParsing="false" text="Search" />
+      <TableView prefHeight="200.0" prefWidth="200.0">
+        <columns>
+          <TableColumn prefWidth="481.0" text="Search Results" />
+        </columns>
+      </TableView>
       <HBox alignment="CENTER" spacing="200.0">
          <children>
             <Button fx:id="primaryButton" onAction="#switchToSecondary" text="Index Maintenance" />
+            <Label text="Number of files indexed:" />
             <Button alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" text="About" textAlignment="CENTER" />
          </children>
       </HBox>
