@@ -10,6 +10,11 @@
       <TextField promptText="Search Files" />
       <Button mnemonicParsing="false" text="Search" />
       <Button fx:id="primaryButton" onAction="#switchToSecondary" text="Index Maintenance" />
+      <VBox alignment="TOP_CENTER" prefHeight="73.0" prefWidth="149.0">
+         <children>
+            <Label text="Search Results" />
+         </children>
+      </VBox>
    </children>
    <padding>
       <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
