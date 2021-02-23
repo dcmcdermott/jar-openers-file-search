@@ -22,9 +22,13 @@
             <Button mnemonicParsing="false" style="-fx-background-color: #b3e5fc; -fx-border-color: #0288d1; -fx-border-radius: 3%; -fx-cursor: hand;" text="Add File" />
             <Button mnemonicParsing="false" style="-fx-background-color: #b3e5fc; -fx-border-color: #0288d1; -fx-border-radius: 3%; -fx-cursor: hand;" text="Remove Selected Files" />
             <Button mnemonicParsing="false" style="-fx-background-color: #b3e5fc; -fx-border-color: #0288d1; -fx-border-radius: 3%; -fx-cursor: hand;" text="Remove Out of date" />
-              <Button fx:id="secondaryButton" onAction="#switchToPrimary" prefHeight="25.0" prefWidth="123.0" style="-fx-background-color: #b3e5fc; -fx-border-color: #0288d1; -fx-border-radius: 3%; -fx-cursor: hand;" text="Back to File Search" />
          </children>
       </HBox>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <Label prefHeight="18.0" prefWidth="402.0" text="Version 1.0" />
+              <Button fx:id="secondaryButton" onAction="#switchToPrimary" prefHeight="28.0" prefWidth="115.0" style="-fx-background-color: #b3e5fc; -fx-border-color: #0288d1; -fx-border-radius: 3%; -fx-cursor: hand;" text="Back to File Search" textAlignment="CENTER" />
+         </children></HBox>
     </children>
     <padding>
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
