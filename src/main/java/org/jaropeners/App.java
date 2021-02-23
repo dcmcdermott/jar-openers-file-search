@@ -18,7 +18,7 @@ public class App extends Application {
 
     @Override
     public void start(Stage stage) throws IOException {
-        scene = new Scene(loadFXML("primary"), 640, 480);
+        scene = new Scene(loadFXML("primary"), 900, 600);
         stage.setScene(scene);
         stage.getIcons().add(new Image("https://image.flaticon.com/icons/png/512/2229/2229536.png"));
         stage.setTitle("Jar Openers File Search");
