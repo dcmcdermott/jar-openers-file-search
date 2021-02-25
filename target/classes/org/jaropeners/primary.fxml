@@ -4,29 +4,37 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.effect.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<VBox alignment="CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.jaropeners.PrimaryController">
+<VBox alignment="TOP_CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.jaropeners.PrimaryController">
    <children>
-      <Label text="Jar Openers File Search" />
-      <TextField promptText="Search Files" />
-      <HBox alignment="CENTER" spacing="5.0">
+      <Label prefHeight="50.0" prefWidth="306.0" text="Jar Openers File Search">
+         <font>
+            <Font size="30.0" />
+         </font></Label>
+      <HBox prefHeight="25.0" prefWidth="670.0" spacing="10.0">
+         <children>
+            <TextField prefHeight="25.0" prefWidth="609.0" promptText="Search Files" />
+            <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="76.0" text="Search" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" spacing="20.0">
          <children>
             <RadioButton mnemonicParsing="false" text="Any of the Search Terms" />
             <RadioButton mnemonicParsing="false" text="All the Search Terms" />
             <RadioButton mnemonicParsing="false" text="Exact Phrase" />
          </children>
       </HBox>
-      <Button mnemonicParsing="false" text="Search" />
-      <TableView prefHeight="200.0" prefWidth="200.0">
+      <TableView prefHeight="400.0" prefWidth="596.0">
         <columns>
-          <TableColumn prefWidth="481.0" text="Search Results" />
+          <TableColumn prefWidth="695.0" text="Search Results" />
         </columns>
       </TableView>
       <HBox alignment="CENTER" spacing="200.0">
          <children>
             <Button fx:id="primaryButton" onAction="#switchToSecondary" text="Index Maintenance" />
             <Label text="Number of files indexed:" />
-            <Button alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" text="About" textAlignment="CENTER" />
+            <Button fx:id="about" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#switchToAbout" text="About" textAlignment="CENTER" />
          </children>
       </HBox>
    </children>

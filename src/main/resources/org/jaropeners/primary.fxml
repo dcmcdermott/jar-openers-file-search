@@ -34,7 +34,7 @@
          <children>
             <Button fx:id="primaryButton" onAction="#switchToSecondary" text="Index Maintenance" />
             <Label text="Number of files indexed:" />
-            <Button alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" text="About" textAlignment="CENTER" />
+            <Button fx:id="about" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#switchToAbout" text="About" textAlignment="CENTER" />
          </children>
       </HBox>
    </children>
