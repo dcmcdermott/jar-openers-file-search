@@ -24,10 +24,10 @@
             <Button mnemonicParsing="false" style="-fx-background-color: #b3e5fc; -fx-border-color: #0288d1; -fx-border-radius: 3%; -fx-cursor: hand;" text="Remove Out of date" />
          </children>
       </HBox>
-      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="500.0">
          <children>
-            <Label prefHeight="18.0" prefWidth="402.0" text="Version 1.0" />
-              <Button fx:id="secondaryButton" onAction="#switchToPrimary" prefHeight="28.0" prefWidth="115.0" style="-fx-background-color: #b3e5fc; -fx-border-color: #0288d1; -fx-border-radius: 3%; -fx-cursor: hand;" text="Back to File Search" textAlignment="CENTER" />
+              <Button fx:id="secondaryButton" onAction="#switchToPrimary" prefHeight="27.0" prefWidth="122.0" style="-fx-background-color: #b3e5fc; -fx-border-color: #0288d1; -fx-border-radius: 3%; -fx-cursor: hand;" text="Back to File Search" textAlignment="CENTER" />
+            <Label prefHeight="18.0" prefWidth="203.0" text="Jar Openers File Search Version 1.0" />
          </children></HBox>
     </children>
     <padding>
