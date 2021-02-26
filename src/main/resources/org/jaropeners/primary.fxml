@@ -6,16 +6,16 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<VBox alignment="TOP_CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.jaropeners.PrimaryController">
+<VBox alignment="TOP_CENTER" spacing="20.0" style="-fx-background-color: #edf0f2;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.jaropeners.PrimaryController">
    <children>
-      <Label prefHeight="50.0" prefWidth="306.0" text="Jar Openers File Search">
+      <Label prefHeight="50.0" prefWidth="306.0" style="-fx-font-weight: bold;" text="Jar Openers File Search">
          <font>
             <Font size="30.0" />
          </font></Label>
       <HBox prefHeight="25.0" prefWidth="670.0" spacing="10.0">
          <children>
-            <TextField prefHeight="25.0" prefWidth="609.0" promptText="Search Files" />
-            <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="76.0" text="Search" />
+            <TextField prefHeight="25.0" prefWidth="615.0" promptText="Search Files" />
+            <Button contentDisplay="CENTER"  mnemonicParsing="false" prefHeight="25.0" prefWidth="76.0" style="-fx-background-color: #b3e5fc; -fx-border-color: #0288d1; -fx-border-radius: 3%; -fx-cursor: hand;" text="Search" textAlignment="CENTER" />
          </children>
       </HBox>
       <HBox alignment="CENTER" spacing="20.0">
@@ -32,9 +32,9 @@
       </TableView>
       <HBox alignment="CENTER" spacing="200.0">
          <children>
-            <Button fx:id="primaryButton" onAction="#switchToSecondary" text="Index Maintenance" />
+            <Button fx:id="primaryButton" onAction="#switchToSecondary" style="-fx-background-color: #b3e5fc; -fx-border-color: #0288d1; -fx-border-radius: 3%; -fx-cursor: hand;" text="Index Maintenance" />
             <Label text="Number of files indexed:" />
-            <Button fx:id="about" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#switchToAbout" text="About" textAlignment="CENTER" />
+            <Button fx:id="about" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" style="-fx-background-color: #b3e5fc; -fx-border-color: #0288d1; -fx-border-radius: 3%; -fx-cursor: hand;" onAction="#switchToAbout" text="About" textAlignment="CENTER" />
          </children>
       </HBox>
    </children>
