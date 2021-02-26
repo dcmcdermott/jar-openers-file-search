@@ -62,7 +62,7 @@
          </children></TilePane>
       <HBox alignment="CENTER" prefHeight="44.0" prefWidth="636.0" spacing="100.0">
          <children>
-            <Button fx:id="Goback" mnemonicParsing="false" onAction="#switchToPrimary" text="Go Back" />
+            <Button fx:id="Goback" mnemonicParsing="false" style="-fx-background-color: #b3e5fc; -fx-border-color: #0288d1; -fx-border-radius: 3%; -fx-cursor: hand;" onAction="#switchToPrimary" text="Go Back" />
          </children>
       </HBox>
    </children>
