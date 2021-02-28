@@ -3,15 +3,15 @@
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
 
 <VBox alignment="TOP_CENTER" spacing="20.0" style="-fx-background-color: #edf0f2;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.jaropeners.PrimaryController">
-
-      <Label prefHeight="50.0" prefWidth="336.0" style="-fx-font-weight: bold;" text="Jar Openers File Search">
-         <font>
-            <Font size="30.0" />
-         </font></Label>
+   <ImageView fitHeight="41.0" fitWidth="194.0">
+      <image>
+         <Image url="@../../Image/Jar%20Openers%20Logo.png" />
+      </image>
+   </ImageView>
       <HBox prefHeight="25.0" prefWidth="670.0" spacing="10.0">
 
             <TextField fx:id="tfSearch" prefHeight="25.0" prefWidth="615.0" promptText="Search Files" />
