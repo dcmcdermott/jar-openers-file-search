@@ -7,9 +7,9 @@
 <?import javafx.scene.text.*?>
 
 <VBox fx:id="about" alignment="TOP_CENTER" onMouseClicked="#switchToAbout" prefHeight="388.0" prefWidth="636.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.jaropeners.PrimaryController">
-   <children>
+
       <HBox prefHeight="100.0" prefWidth="200.0">
-         <children>
+
             <ImageView fitHeight="100.0" fitWidth="113.0" pickOnBounds="true" preserveRatio="true" />
             <Label contentDisplay="CENTER" prefHeight="102.0" prefWidth="164.0" text="About" textAlignment="JUSTIFY" textOverrun="CENTER_ELLIPSIS">
                <font>
@@ -19,10 +19,10 @@
                   <Insets left="260.0" />
                </HBox.margin>
             </Label>
-         </children>
+
       </HBox>
       <TilePane alignment="CENTER_LEFT" prefHeight="242.0" prefWidth="636.0">
-         <children>
+
             <Label contentDisplay="CENTER" prefHeight="30.0" prefWidth="254.0" text=" Jar Openers File Search 1.0">
                <TilePane.margin>
                   <Insets left="320.0" />
@@ -59,11 +59,12 @@
                   <Insets left="205.0" />
                </TilePane.margin>
             </Label>
-         </children></TilePane>
+         </TilePane>
       <HBox alignment="CENTER" prefHeight="44.0" prefWidth="636.0" spacing="100.0">
-         <children>
-            <Button fx:id="Goback" mnemonicParsing="false" style="-fx-background-color: #b3e5fc; -fx-border-color: #0288d1; -fx-border-radius: 3%; -fx-cursor: hand;" onAction="#switchToPrimary" text="Go Back" />
-         </children>
+
+
+            <Button fx:id="btnGoBack" mnemonicParsing="false" style="-fx-background-color: #b3e5fc; -fx-border-color: #0288d1; -fx-border-radius: 3%; -fx-cursor: hand;" onAction="#switchToPrimary" text="Go Back" />
+
       </HBox>
-   </children>
+
 </VBox>
