@@ -7,8 +7,8 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 
 public class CreateStorageFile {
-
     public static void main(String[] args) {
+
         try
         {
             String userHome = System.getProperty("user.home");
