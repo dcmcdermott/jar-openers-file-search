@@ -53,10 +53,20 @@ public class API {
         }
         System.out.println("Storage file scanned successfully");
 
-        // print the list to the console
+        // print the list to the console for testing
         for(String file : fileList) {
             System.out.println(file);
         }
         s.close();
     }
+
+    // ADD FILE METHOD
+
+
+    // DELETE FILE METHOD
+
+
+    // SEARCH FILE METHOD
+
+
 }
