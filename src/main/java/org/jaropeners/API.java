@@ -9,6 +9,7 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Scanner;
+import java.io.*;
 
 public class API {
 
@@ -58,10 +59,29 @@ public class API {
     }
 
     // ADD FILE METHOD
-
+    public static void add(String[] args) {
+        try {
+            File addFile = new File("filename.txt");
+            if (addFile.createNewFile()) {
+                System.out.println("File successfully created: " + addFile.getName());
+            } else {
+                System.out.println("I'm sorry, this file name already exists.");
+            }
+        } catch (IOException e) {
+                System.out.println("An error occurred.");
+                e.printStackTrace();
+            }
+    }
 
     // DELETE FILE METHOD
-
+    public static void delete(String f) {
+        File deleteFile = new File(f);
+        if (deleteFile.delete()) {
+            System.out.println("File was successfully deleted: " + deleteFile.getName());
+        } else {
+            System.out.println("File was NOT successfully deleted.");
+        }
+    }
 
     // SEARCH FILE METHOD
     // LAST MODIFIED METHOD
