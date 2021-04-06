@@ -60,8 +60,18 @@ public class API {
     // ADD FILE METHOD
 
 
-    // DELETE FILE METHOD
 
+
+
+    // DELETE FILE METHOD
+    public static void delete(String f) {
+        File file = new File(f);
+        if (file.delete()) {
+            System.out.println("Deleted the file: " + file.getName());
+        } else {
+            System.out.println("Failed to delete the file.");
+        }
+    }
 
     // SEARCH FILE METHOD
     // LAST MODIFIED METHOD
