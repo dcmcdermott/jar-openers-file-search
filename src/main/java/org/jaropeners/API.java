@@ -82,7 +82,7 @@ public class API {
     public static void deleteFile(String f) {
         File file = new File(f);
         if (file.delete()) {
-            //System.out.println("Deleted file: " + file.getName());
+            System.out.println("Deleted file: " + file.getName());
         } else {
            System.out.println("Unable to delete the file.");
         }
