@@ -1,6 +1,9 @@
 package org.jaropeners;
 
-import java.io.*;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileWriter;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -55,38 +58,10 @@ public class API {
     }
 
     // ADD FILE METHOD
-    public static void addFile(){
-        try
-        {
-            String userHome = System.getProperty("user.home");
-            Path storageFile = Paths.get(userHome, "jarOpenersStorage.txt");
-
-            if (Files.notExists(storageFile)){
-            System.out.print("File no longer exists.");
-        }
-            else{
-                FileWriter newPhrase = new FileWriter( "jarOpenersStorage.txt");
-                PrintWriter printWriter = new PrintWriter(newPhrase);
-                newPhrase.write("New list");
-                newPhrase.close();
-                System.out.println("Successfully Added");
-        }
-        } catch (IOException e) {
-            System.out.println("Unable to add.");
-            e.printStackTrace();
-        }
-    }
 
 
     // DELETE FILE METHOD
-    public static void deleteFile(String f) {
-        File file = new File(f);
-        if (file.delete()) {
-            System.out.println("Deleted file: " + file.getName());
-        } else {
-           System.out.println("Unable to delete the file.");
-        }
-    }
+
 
     // SEARCH FILE METHOD
     // LAST MODIFIED METHOD
@@ -96,16 +71,13 @@ public class API {
             Path storageFile = Paths.get(userHome, "jarOpenersStorage.txt");
 
             //if file no longer exists
-            if (Files.notExists(storageFile)) {
+            if (Files.notExists(storageFile))
                 System.out.print("File no longer exists.");
-            }
         // if does exist
         // if file hase been modified, prints modified date
-        else {
-                Files.exists(storageFile);
-                System.out.println("File still exists. \nFile was last modified on: " + (Files.getLastModifiedTime(storageFile)));
-
-            }
+        else
+        Files.exists(storageFile);
+        System.out.println("File still exists. \nFile was last modified on: " + (Files.getLastModifiedTime(storageFile)));
 
     } catch(
     Exception e)

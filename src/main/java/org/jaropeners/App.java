@@ -7,6 +7,7 @@ import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
+import java.io.FileNotFoundException;
 import java.io.IOException;
 
 /**
@@ -36,15 +37,13 @@ public class App extends Application {
 
     }
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws FileNotFoundException {
         // Prior to launching GUI
         // Check for storage file and create it if doesn't exist
         // If it does exist read the lines from the file and store them in the file List
         API.createStorageFile();
         API.readStorageFile();
-        API.addFile();
         API.checkIndexedFiles();
-
         launch();
     }
 }
