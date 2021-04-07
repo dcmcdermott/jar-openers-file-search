@@ -1,5 +1,9 @@
 package org.jaropeners;
 
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileWriter;
 import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -65,9 +69,13 @@ public class API {
             System.out.print("File no longer exists.");
         }
             else{
-                FileWriter newPhrase = new FileWriter( "jarOpenersStorage.txt");
+
+                FileWriter newPhrase = new FileWriter( "jarOpenersStorage.txt",true);
                 PrintWriter printWriter = new PrintWriter(newPhrase);
-                newPhrase.write("New list");
+                Scanner scanner = new Scanner(System.in);
+                System.out.println("Add a word to the list");
+                String message = scanner.nextLine();
+                newPhrase.write(message + "\n");
                 newPhrase.close();
                 System.out.println("Successfully Added");
         }
