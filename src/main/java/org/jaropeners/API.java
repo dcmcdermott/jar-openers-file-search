@@ -61,7 +61,8 @@ public class API {
     // UPDATE STORAGE FILE METHOD
     // * Clear the storage file and write the current fileList to it *
     //
-
+public static void updateStorageFile() throws FileNotFoundException {
+}
 
     // ADD FILE METHOD
     // *Needs fix*  Needs to add to the fileList
@@ -96,14 +97,13 @@ public class API {
     // *Needs fix*  Needs to add to the fileList
     //              Should implement Update Storage File method
     public static void deleteFile(String f) {
-        File file = new File(f);
-        if (file.delete()) {
-            System.out.println("Deleted file: " + file.getName());
-        } else {
-           System.out.println("Unable to delete the file.");
+        File deleteFile = new File(f);
+        if (deleteFile.delete()) {
+            System.out.println("File was successfully deleted: " + deleteFile.getName());
         }
-    }
-
+        else{
+            System.out.println("File was NOT successfully deleted.");
+        }
     // LAST MODIFIED METHOD
     public static void checkIndexedFiles() {
         try {
