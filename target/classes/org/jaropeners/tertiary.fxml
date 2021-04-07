@@ -23,7 +23,7 @@
       </HBox>
       <TilePane alignment="CENTER_LEFT" prefHeight="242.0" prefWidth="636.0">
 
-            <Label contentDisplay="CENTER" prefHeight="30.0" prefWidth="285.0" text=" Jar Openers File Search 1.0">
+            <Label contentDisplay="CENTER" prefHeight="30.0" prefWidth="254.0" text=" Jar Openers File Search 1.0">
                <TilePane.margin>
                   <Insets left="320.0" />
                </TilePane.margin>
@@ -31,7 +31,7 @@
                   <Font name="System Bold" size="19.0" />
                </font>
             </Label>
-            <Label prefHeight="25.0" prefWidth="142.0" text="GitHub Contributors:">
+            <Label prefHeight="25.0" prefWidth="93.0" text="Contributors:">
                <TilePane.margin>
                   <Insets left="180.0" />
                </TilePane.margin>
@@ -39,22 +39,22 @@
                   <Font size="15.0" />
                </font>
             </Label>
-            <Label prefHeight="17.0" prefWidth="99.0" text="dcmcdermott">
+            <Label prefHeight="17.0" prefWidth="99.0" text="Devin McDermott">
                <TilePane.margin>
                   <Insets left="196.0" />
                </TilePane.margin>
             </Label>
-            <Label prefHeight="17.0" prefWidth="91.0" text="a-camelio">
+            <Label text="Amanda Camelio">
                <TilePane.margin>
                   <Insets left="188.0" />
                </TilePane.margin>
             </Label>
-            <Label prefHeight="17.0" prefWidth="76.0" text="jemeek82">
+            <Label prefHeight="17.0" prefWidth="76.0" text="Justin Meek">
                <TilePane.margin>
                   <Insets left="176.0" />
                </TilePane.margin>
             </Label>
-            <Label prefHeight="17.0" prefWidth="105.0" text="joako75">
+            <Label text="Joaquin Rojas chang">
                <TilePane.margin>
                   <Insets left="205.0" />
                </TilePane.margin>
@@ -63,7 +63,7 @@
       <HBox alignment="CENTER" prefHeight="44.0" prefWidth="636.0" spacing="100.0">
 
 
-            <Button fx:id="btnGoBack" mnemonicParsing="false" onAction="#switchToPrimary" style="-fx-background-color: #b3e5fc; -fx-border-color: #0288d1; -fx-border-radius: 3%; -fx-cursor: hand;" text="Go Back" />
+            <Button fx:id="btnGoBack" mnemonicParsing="false" style="-fx-background-color: #b3e5fc; -fx-border-color: #0288d1; -fx-border-radius: 3%; -fx-cursor: hand;" onAction="#switchToPrimary" text="Go Back" />
 
       </HBox>
 

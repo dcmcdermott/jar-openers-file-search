@@ -1,3 +1,9 @@
+/* Devin McDermott     *
+ * Amanda Camelio      *
+ * Joaquin Rojas Chang *
+ * Justin Meek         *
+ * * * * * * * * * * * */
+
 package org.jaropeners;
 
 import java.io.BufferedWriter;
@@ -51,7 +57,7 @@ public class API {
         }
         System.out.println("✅ Storage file scanned");
         System.out.println();
-        System.out.println("💾 File content:");
+        System.out.println("💾 File content 💾");
 
         // print the list to the console for testing
         for (String file : fileList) {

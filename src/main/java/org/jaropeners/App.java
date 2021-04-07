@@ -1,3 +1,9 @@
+/* Devin McDermott     *
+ * Amanda Camelio      *
+ * Joaquin Rojas Chang *
+ * Justin Meek         *
+ * * * * * * * * * * * */
+
 package org.jaropeners;
 
 import javafx.application.Application;
