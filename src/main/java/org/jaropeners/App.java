@@ -1,4 +1,5 @@
-/* Devin McDermott     *
+/* * * * * * * * * * * *
+ * Devin McDermott     *
  * Amanda Camelio      *
  * Joaquin Rojas Chang *
  * Justin Meek         *
