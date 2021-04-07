@@ -42,7 +42,8 @@ public class App extends Application {
         // If it does exist read the lines from the file and store them in the file List
         API.createStorageFile();
         API.readStorageFile();
-        API.addFile();
+        /* API.addFile();      // *needs fix*
+           API.readStorageFile(); */
         API.checkIndexedFiles();
 
         launch();

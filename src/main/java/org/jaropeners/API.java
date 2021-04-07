@@ -58,7 +58,14 @@ public class API {
         s.close();
     }
 
+    // UPDATE STORAGE FILE METHOD
+    // * Clear the storage file and write the current fileList to it *
+    //
+
+
     // ADD FILE METHOD
+    // *Needs fix*  Needs to add to the fileList
+    //              Should implement Update Storage File method
     public static void addFile(){
         try
         {
@@ -85,8 +92,9 @@ public class API {
         }
     }
 
-
     // DELETE FILE METHOD
+    // *Needs fix*  Needs to add to the fileList
+    //              Should implement Update Storage File method
     public static void deleteFile(String f) {
         File file = new File(f);
         if (file.delete()) {
@@ -96,7 +104,6 @@ public class API {
         }
     }
 
-    // SEARCH FILE METHOD
     // LAST MODIFIED METHOD
     public static void checkIndexedFiles() {
         try {
@@ -108,18 +115,15 @@ public class API {
                 System.out.print("File no longer exists.");
             }
         // if does exist
-        // if file hase been modified, prints modified date
+        // if file has been modified, prints modified date
+        // prints to sout for testing. Will be displayed in GUI
         else {
                 Files.exists(storageFile);
                 System.out.println("File still exists. \nFile was last modified on: " + (Files.getLastModifiedTime(storageFile)));
-
             }
-
-    } catch(
-    Exception e)
-
-    {
+    } catch(Exception e) {
         e.printStackTrace();
     }
   }
+
 }
