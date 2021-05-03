@@ -29,14 +29,15 @@ public class PrimaryController implements Initializable {
     public TextField tfSearch;
     public Button btnSearch;
     public Label number_indexed;
-
-    @FXML
-    public ListView<String> tvSearchResults;
     public RadioButton radAny;
     public RadioButton radAll;
     public RadioButton radExact;
     public Button btnIndexMaintenance;
     public Button btnAbout;
+    public ToggleGroup search_type;
+
+    @FXML
+    public ListView<String> tvSearchResults;
 
     ObservableList<IndexedFile> oblist = FXCollections.observableArrayList();
 
@@ -45,6 +46,19 @@ public class PrimaryController implements Initializable {
 
         getIndex();
         number_indexed.setText(oblist.size() + " files indexed");
+    }
+
+    @FXML
+    public void search() {
+        if (search_type.getSelectedToggle().equals(radAny)) {
+            searchAny();
+        }
+        else if (search_type.getSelectedToggle().equals(radAll)) {
+            searchAll();
+        }
+        else if (search_type.getSelectedToggle().equals(radExact)) {
+            searchExact();
+        }
     }
 
     @FXML
@@ -66,11 +80,51 @@ public class PrimaryController implements Initializable {
 
                 if(Arrays.asList(fp_words).contains(value)) {
 
-                    System.out.println(fp);
                     tvSearchResults.getItems().add(fp);
                 }
             });
         }
+    }
+
+    @FXML
+    private void searchAll() {
+
+        tvSearchResults.getItems().clear();
+
+        String s = tfSearch.getText();
+
+        String[] search_values = s.toLowerCase().split("[^\\w']+");
+
+            oblist.forEach(o -> {
+
+                String fp = o.getFilepath();
+
+                String[] fp_words = fp.toLowerCase().split("[^\\w']+");
+
+                if(Arrays.asList(fp_words).containsAll(Arrays.asList(search_values))) {
+
+                    tvSearchResults.getItems().add(fp);
+                }
+            });
+
+    }
+
+    @FXML
+    private void searchExact() {
+
+        tvSearchResults.getItems().clear();
+
+        String s = tfSearch.getText();
+
+            oblist.forEach(o -> {
+
+                String fp = o.getFilepath();
+
+                if(s.equals(fp)) {
+
+                    tvSearchResults.getItems().add(fp);
+                }
+            });
     }
 
     private void getIndex() {
@@ -95,10 +149,5 @@ public class PrimaryController implements Initializable {
     @FXML
     public void switchToAbout() throws IOException {
         App.setRoot("about");
-    }
-
-    @FXML
-    public void switchToPrimary() throws IOException {
-        App.setRoot("primary");
     }
 }
