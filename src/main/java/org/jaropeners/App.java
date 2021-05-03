@@ -12,8 +12,10 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
+import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
+import java.io.File;
 import java.io.IOException;
 
 /**
@@ -31,6 +33,9 @@ public class App extends Application {
         stage.getIcons().add(new Image("https://image.flaticon.com/icons/png/512/2229/2229536.png"));
         stage.setTitle("Jar Openers File Search");
         stage.show();
+
+
+
     }
 
     static void setRoot(String fxml) throws IOException {
@@ -44,14 +49,7 @@ public class App extends Application {
     }
 
     public static void main(String[] args) throws IOException {
-        // Prior to launching GUI
-        // Check for storage file and create it if doesn't exist
-        // If it does exist read the lines from the file and store them in the file List
-        API.createStorageFile();
-        API.readStorageFile();
-        /* API.addFile();      // *needs fix*
-           API.readStorageFile(); */
-        API.checkIndexedFiles();
+
 
         launch();
     }

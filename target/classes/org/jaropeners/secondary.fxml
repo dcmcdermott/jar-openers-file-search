@@ -11,16 +11,16 @@
          <font>
             <Font size="30.0" />
          </font></Label>
-      <TableView prefHeight="400.0" prefWidth="596.0">
+      <TableView fx:id="tvIndexedFiles" prefHeight="400.0" prefWidth="596.0">
         <columns>
-          <TableColumn fx:id="tvIndexedFiles" prefWidth="298.0" text="File Name" />
-          <TableColumn prefWidth="298.0" text="Status" />
+          <TableColumn fx:id="col_filepath" prefWidth="298.0" text="File Name" />
+          <TableColumn fx:id="col_last_modified" prefWidth="298.0" text="Status" />
         </columns>
       </TableView>
       <HBox alignment="CENTER" spacing="100.0">
 
-            <Button fx:id="btnAddFile" mnemonicParsing="false" style="-fx-background-color: #b3e5fc; -fx-border-color: #0288d1; -fx-border-radius: 3%; -fx-cursor: hand;" text="Add File" />
-            <Button fx:id="btnRemoveFile" mnemonicParsing="false" style="-fx-background-color: #b3e5fc; -fx-border-color: #0288d1; -fx-border-radius: 3%; -fx-cursor: hand;" text="Remove Selected Files" />
+            <Button fx:id="btnAddFile" onAction="#addFile" mnemonicParsing="false" style="-fx-background-color: #b3e5fc; -fx-border-color: #0288d1; -fx-border-radius: 3%; -fx-cursor: hand;" text="Add File" />
+            <Button fx:id="btnRemoveFile" onAction="#removeFile" mnemonicParsing="false" style="-fx-background-color: #b3e5fc; -fx-border-color: #0288d1; -fx-border-radius: 3%; -fx-cursor: hand;" text="Remove Selected Files" />
             <Button fx:id="btnRemoveOutOfDate" mnemonicParsing="false" style="-fx-background-color: #b3e5fc; -fx-border-color: #0288d1; -fx-border-radius: 3%; -fx-cursor: hand;" text="Remove Out of date" />
 
       </HBox>
