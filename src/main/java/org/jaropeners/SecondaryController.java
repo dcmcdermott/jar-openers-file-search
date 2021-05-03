@@ -11,10 +11,8 @@ import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 import java.nio.file.Files;
-import java.nio.file.Path;
 import java.nio.file.attribute.FileTime;
 import java.sql.*;
-import java.util.Arrays;
 import java.util.ResourceBundle;
 
 import javafx.collections.FXCollections;
@@ -26,11 +24,15 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.FileChooser;
-import javafx.stage.Stage;
 
+// Controller class for secondary.fxml (index maintenance page)
 public class SecondaryController implements Initializable {
 
+    public Button btnAddFile;
+    public Button btnRemoveFile;
+    public Button btnBackToFileSearch;
 
+    // indexed files tableview
     @FXML
     public TableView<IndexedFile> tvIndexedFiles;
     @FXML
@@ -38,21 +40,30 @@ public class SecondaryController implements Initializable {
     @FXML
     public TableColumn<IndexedFile, String> col_last_modified;
 
-    private static ObservableList<IndexedFile> oblist = FXCollections.observableArrayList();
+    final static ObservableList<IndexedFile> oblist = FXCollections.observableArrayList();
 
+    // initialize in startup
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         updateTable();
     }
 
+    // When add file button is clicked
     @FXML
     public void addFile() throws IOException {
+
+        // display file chooser to user
         FileChooser fileChooser = new FileChooser();
-        fileChooser.setTitle("Open Resource File");
+        fileChooser.setTitle("Add File to Index");
+
+        // get filepath and last_modified time from chosen file
         File selectedFile = fileChooser.showOpenDialog(null);
         FileTime lm = Files.getLastModifiedTime(selectedFile.toPath());
 
+        // add the chosen file to db
         try (Connection con = DBDriver.getConnection()) {
+
+            // sql query
             String query = " insert into indexed_files (filepath, last_modified)"
                     + " values (?, ?)";
 
@@ -63,27 +74,25 @@ public class SecondaryController implements Initializable {
 
             // execute the prepared statement
             preparedStmt.execute();
-
         }
         catch (SQLException throwables) {
             throwables.printStackTrace();
         }
+        // update the tableview
         updateTable();
     }
 
+    // when remove selected file button is clicked
     @FXML
-    private void removeFile() throws Exception {
+    private void removeFile() {
 
-        // get data from currently selected row and current time
+        // get filepath from currently selected row
         String selected_file_path = tvIndexedFiles.getSelectionModel().getSelectedItem().filepath;
 
-        // remove the given med from today's med list
-        //tvPrescriptions.getItems().removeAll(tvPrescriptions.getSelectionModel().getSelectedItem());
-
+        // delete selected file from db
         try (Connection con = DBDriver.getConnection()) {
 
-            // Q1 update given today to true for selected med
-            // sql statement
+            // sql query
             String query = "delete from indexed_files where filepath = ?";
 
             // create sql prepared statement
@@ -92,18 +101,21 @@ public class SecondaryController implements Initializable {
 
             // execute the prepared statement
             preparedStmt1.execute();
-
-        } catch (SQLException throwables) {
+        }
+        catch (SQLException throwables) {
             throwables.printStackTrace();
         }
 
-        // refresh given meds table
+        // update the tableview
         updateTable();
     }
 
+    // update indexed files tableview
     public void updateTable() {
 
+        // clear the tableview
         tvIndexedFiles.getItems().clear();
+
         // get all indexed files from db and store them as objects in oblist
         try (Connection con = DBDriver.getConnection()) {
             ResultSet rs = con.createStatement().executeQuery("select * from indexed_files");
@@ -125,6 +137,7 @@ public class SecondaryController implements Initializable {
         tvIndexedFiles.setItems(oblist);
     }
 
+    // navigation button methods
     @FXML
     private void switchToPrimary() throws IOException {
         tvIndexedFiles.getItems().clear();

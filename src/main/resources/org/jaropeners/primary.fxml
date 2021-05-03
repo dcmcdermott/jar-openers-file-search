@@ -11,24 +11,19 @@
          <Image url="@../../Image/JarOpenersLogo.png" />
     </ImageView>
       <HBox prefHeight="25.0" prefWidth="670.0" spacing="10.0">
-
             <TextField fx:id="tfSearch" prefHeight="25.0" prefWidth="615.0" promptText="Search Files" />
             <Button fx:id="btnSearch" contentDisplay="CENTER" mnemonicParsing="false" onAction="#search" prefHeight="25.0" prefWidth="76.0" style="-fx-background-color: #b3e5fc; -fx-border-color: #0288d1; -fx-border-radius: 3%; -fx-cursor: hand;" text="Search" textAlignment="CENTER" />
-
       </HBox>
       <HBox alignment="CENTER" spacing="20.0">
-
             <RadioButton fx:id="radAny" mnemonicParsing="false" text="Any of the Search Terms">
          <toggleGroup>
             <ToggleGroup fx:id="search_type" />
          </toggleGroup></RadioButton>
             <RadioButton fx:id="radAll" mnemonicParsing="false" text="All the Search Terms" toggleGroup="$search_type" />
             <RadioButton fx:id="radExact" mnemonicParsing="false" text="Exact Phrase" toggleGroup="$search_type" />
-
       </HBox>
       <ListView fx:id="tvSearchResults" prefHeight="400.0" prefWidth="596.0" />
       <HBox alignment="CENTER_LEFT">
-
             <Button fx:id="btnIndexMaintenance" onAction="#switchToSecondary" style="-fx-background-color: #b3e5fc; -fx-border-color: #0288d1; -fx-border-radius: 3%; -fx-cursor: hand;" text="Index Maintenance">
          <HBox.margin>
             <Insets left="25.0" />
@@ -41,9 +36,7 @@
          <HBox.margin>
             <Insets left="220.0" />
          </HBox.margin></Button>
-
       </HBox>
-   
    <effect>
       <Blend />
    </effect>
