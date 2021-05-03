@@ -14,6 +14,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.attribute.FileTime;
 import java.sql.*;
+import java.util.Arrays;
 import java.util.ResourceBundle;
 
 import javafx.collections.FXCollections;
@@ -37,16 +38,7 @@ public class SecondaryController implements Initializable {
     @FXML
     public TableColumn<IndexedFile, String> col_last_modified;
 
-    ObservableList<IndexedFile> oblist = FXCollections.observableArrayList();
-
-    @FXML
-    private Button btnAddFile;
-    @FXML
-    private Button btnRemoveFile;
-    @FXML
-    private Button btnRemoveOutOfDate;
-    @FXML
-    private Button btnBackToFileSearch;
+    private static ObservableList<IndexedFile> oblist = FXCollections.observableArrayList();
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -109,7 +101,7 @@ public class SecondaryController implements Initializable {
         updateTable();
     }
 
-    private void updateTable() {
+    public void updateTable() {
 
         tvIndexedFiles.getItems().clear();
         // get all indexed files from db and store them as objects in oblist
@@ -135,6 +127,7 @@ public class SecondaryController implements Initializable {
 
     @FXML
     private void switchToPrimary() throws IOException {
+        tvIndexedFiles.getItems().clear();
         App.setRoot("primary");
     }
 
